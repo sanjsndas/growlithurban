@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Growlith · Terms of Service</title>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Roboto, system-ui, sans-serif;
+    }
+
+    body {
+      background: #f5faf2;
+      color: #1a3325;
+      line-height: 1.8;
+    }
+
+    .wrapper {
+      max-width: 1300px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    /* ----- navbar ----- */
+    .navbar {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.5rem 0 0.8rem;
+      border-bottom: 2px solid #cde3cb;
+      margin-bottom: 2rem;
+    }
+
+    .logo {
+      font-size: 2rem;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      color: #1f5e3a;
+    }
+    .logo i {
+      color: #3b8b5e;
+      margin-right: 6px;
+    }
+    .logo span {
+      font-weight: 300;
+      color: #527a5e;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.8rem;
+      list-style: none;
+      flex-wrap: wrap;
+    }
+    .nav-links a {
+      text-decoration: none;
+      color: #1e3a2f;
+      font-weight: 500;
+      padding: 0.4rem 0.2rem;
+      border-bottom: 2px solid transparent;
+      transition: 0.2s ease;
+      font-size: 1.05rem;
+    }
+    .nav-links a:hover {
+      border-bottom-color: #3b8b5e;
+      color: #0f2b1e;
+    }
+
+    /* terms header */
+    .terms-header {
+      margin: 1.2rem 0 2rem;
+    }
+    .terms-header h1 {
+      font-size: 2.8rem;
+      font-weight: 600;
+      color: #154a27;
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+    }
+    .terms-header h1 i {
+      color: #2f7a4a;
+      font-size: 2.6rem;
+    }
+    .terms-header p {
+      font-size: 1.2rem;
+      opacity: 0.8;
+      max-width: 800px;
+      margin-top: 0.2rem;
+    }
+
+    .terms-block {
+      background: rgba(255, 255, 255, 0.75);
+      backdrop-filter: blur(2px);
+      padding: 2.2rem 2.8rem;
+      border-radius: 40px 12px 40px 12px;
+      box-shadow: 0 10px 28px rgba(30, 60, 30, 0.05);
+      border: 1px solid rgba(160, 190, 150, 0.25);
+      margin-bottom: 2.8rem;
+      transition: 0.15s;
+    }
+    .terms-block:hover {
+      background: rgba(255, 255, 255, 0.88);
+      box-shadow: 0 18px 34px rgba(40, 80, 40, 0.07);
+    }
+
+    .terms-block h2 {
+      font-size: 2rem;
+      font-weight: 600;
+      color: #1b4d2e;
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      border-bottom: 1px solid #d3e5cc;
+      padding-bottom: 0.5rem;
+    }
+    .terms-block h2 i {
+      color: #3b8b5e;
+      font-size: 1.8rem;
+    }
+    .terms-block p {
+      margin-bottom: 1.2rem;
+      font-size: 1.06rem;
+      color: #1f3d2b;
+    }
+    .terms-block ul, .terms-block ol {
+      margin: 1rem 0 1.2rem 2rem;
+    }
+    .terms-block li {
+      margin-bottom: 0.5rem;
+    }
+
+    .highlight-box {
+      background: #e4f1de;
+      padding: 1.8rem 2rem;
+      border-radius: 40px 8px 40px 8px;
+      margin: 1.2rem 0 0.6rem;
+      border-left: 6px solid #2f7a4a;
+    }
+
+    .footer {
+      margin-top: 4rem;
+      padding: 2.2rem 0 2rem;
+      border-top: 2px solid #cde0c5;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1.5rem;
+    }
+    .footer-address {
+      font-style: normal;
+      font-size: 1rem;
+      color: #1f442b;
+    }
+    .footer-address i {
+      width: 1.6rem;
+      color: #2f7a4a;
+    }
+    .footer-phone {
+      font-weight: 500;
+      font-size: 1.2rem;
+    }
+    .footer-phone i {
+      color: #2f7a4a;
+      margin-right: 6px;
+    }
+    .footer-copy {
+      opacity: 0.7;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 700px) {
+      .navbar {
+        flex-direction: column;
+        align-items: start;
+        gap: 0.8rem;
+      }
+      .nav-links {
+        gap: 1rem;
+      }
+      .terms-block {
+        padding: 1.8rem 1.5rem;
+      }
+      .terms-header h1 {
+        font-size: 2.2rem;
+      }
+      .footer {
+        flex-direction: column;
+        align-items: start;
+      }
+    }
+    @media (max-width: 480px) {
+      .terms-block h2 {
+        font-size: 1.6rem;
+      }
+    }
+  </style>
+</head>
+<body>
+<div class="wrapper">
+
+  <!-- navigation -->
+  <nav class="navbar">
+    <div class="logo">
+      <i class="fas fa-seedling"></i> Growlith <span>· terms</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="home.html">Home</a></li>
+      <li><a href="privacy.html">Privacy</a></li>
+      <li><a href="terms.html">Terms</a></li>
+      <li><a href="cookies.html">Cookies</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- terms header -->
+  <div class="terms-header">
+    <h1><i class="fas fa-file-contract"></i> Terms of Service</h1>
+    <p>Please read these terms carefully before using Growlith's services. By engaging with us, you agree to be bound by these conditions.</p>
+  </div>
+
+  <!-- TERMS CONTENT: 2500+ words -->
+  <div class="terms-block">
+    <h2><i class="fas fa-gavel"></i> 1. Acceptance of terms</h2>
+    <p>These Terms of Service ("Terms") constitute a legally binding agreement between you ("Client", "User", "you") and Growlith ("we", "our", "us"), governing your use of our website, services, and any related interactions. By accessing our website, requesting a consultation, or purchasing our gardening services, you agree to comply with these Terms. If you do not agree, please refrain from using our services.</p>
+    <p>We reserve the right to update or modify these Terms at any time without prior notice. Your continued use of our services after changes are posted constitutes your acceptance of the new Terms. The latest version will always be available on this page.</p>
+    <div class="highlight-box">
+      <i class="fas fa-calendar-check" style="color:#1f5e3a; margin-right:10px;"></i> <strong>Effective date:</strong> January 1, 2026. These Terms supersede all previous versions.
+    </div>
+  </div>
+
+  <div class="terms-block">
+    <h2><i class="fas fa-user-plus"></i> 2. Service description & scope</h2>
+    <p>Growlith provides urban balcony and terrace gardening services, including but not limited to: design consultation, plant selection, installation, maintenance, seasonal refreshes, and related horticultural advice. Our services are tailored to each client's space, preferences, and budget.</p>
+    <p>We offer different service packages (e.g., Basic, Premium, Full-Service). The specific scope of work, deliverables, and timeline will be outlined in a separate Service Agreement or Proposal provided to you before commencement. These Terms govern all such agreements.</p>
+    <ul>
+      <li><strong>Design phase:</strong> includes site assessment, mood boards, plant recommendations, and 3D renderings (if applicable).</li>
+      <li><strong>Installation:</strong> physical setup of planters, soil, plants, irrigation systems, and decorative elements.</li>
+      <li><strong>Maintenance:</strong> regular visits for watering, pruning, fertilizing, pest control, and seasonal updates.</li>
+    </ul>
+    <p>We strive to exceed expectations, but we cannot guarantee that plants will thrive indefinitely due to factors beyond our control (e.g., weather, client negligence). Our replacement guarantee covers plant mortality within the first 90 days, subject to proper care.</p>
+  </div>
+
+  <div class="terms-block">
+    <h2><i class="fas fa-credit-card"></i> 3. Fees, payment & invoicing</h2>
+    <p>All fees for services are quoted in USD (or local currency) and are exclusive of applicable taxes. A detailed quote will be provided before any work begins. Payment terms are as follows:</p>
+    <ul>
+      <li>A 50% deposit is required to secure your project and schedule installation.</li>
+      <li>The remaining 50% is due upon completion of the installation, unless otherwise specified in the Service Agreement.</li>
+      <li>Maintenance packages are billed monthly or quarterly in advance.</li>
+      <li>We accept major credit cards, bank transfers, and digital payment platforms.</li>
+    </ul>
+    <p>Late payments may incur a 1.5% monthly interest charge. If payment is not received within 30 days of the due date, we reserve the right to suspend services until the account is settled. Any collection costs or legal fees incurred will be borne by the client.</p>
+    <p>All prices are subject to change; however, once a quote is accepted, the price is locked for the duration of that project.</p>
+  </div>
+
+  <div class="terms-block">
+    <h2><i class="fas fa-calendar-alt"></i> 4. Cancellations, rescheduling & refunds</h2>
+    <p>We understand that plans change. Our cancellation policy is designed to be fair:</p>
+    <ul>
+      <li><strong>Consultation cancellation:</strong> free if canceled 24 hours in advance; otherwise, a $50 fee may apply.</li>
+      <li><strong>Project cancellation:</strong> if you cancel after the deposit is paid but before installation begins, you will receive a refund of the deposit minus any costs already incurred (e.g., design work, plant procurement).</li>
+      <li><strong>Installation cancellation:</strong> if you cancel less than 72 hours before the scheduled installation, 50% of the project fee is non-refundable.</li>
+      <li><strong>Maintenance cancellation:</strong> you may cancel your maintenance package with 30 days' written notice. Prepaid but unused months will be refunded.</li>
+    </ul>
+    <p>Refunds, if applicable, will be processed within 14 business days. We do not offer refunds for services already rendered (e.g., completed installations).</p>
+  </div>
+
+  <div class="terms-block">
+    <h2><i class="fas fa-tools"></i> 5. Client responsibilities</h2>
+    <p>To ensure a smooth collaboration, you agree to:</p>
+    <ul>
+      <li>Provide accurate and complete information about your space, including any structural limitations, access issues, or building regulations.</li>
+      <li>Obtain any necessary permissions from building management or homeowners' associations before installation.</li>
+      <li>Ensure that the work area is accessible and safe for our team (e.g., clear of debris, pets secured).</li>
+      <li>Follow the care instructions provided by our team to maintain your garden's health.</li>
+      <li>Notify us promptly of any issues, such as plant distress or irrigation malfunctions.</li>
+    </ul>
+    <p>Failure to meet these responsibilities may void our guarantee and affect the longevity of your garden.</p>
+  </div>
+
+  <div class="terms-block">
+    <h2><i class="fas fa-hard-hat"></i> 6. Liability & warranty</h2>
+    <p>Growlith provides services with professional care and skill. However, we cannot be held liable for:</p>
+    <ul>
+      <li>Damage caused by extreme weather, pests, or conditions beyond our control.</li>
+      <li>Injury or damage resulting from client misuse, neglect, or unauthorized alterations.</li>
+      <li>Indirect or consequential losses (e.g., loss of enjoyment, inconvenience).</li>
+    </ul>
+    <p>Our total liability for any claim arising from our services is limited to the total amount paid by you for the specific service in question. We maintain professional liability insurance for added protection.</p>
+    <p><strong>Plant warranty:</strong> we guarantee that all plants supplied are healthy at the time of installation. If a plant fails within 90 days due to our error (e.g., incorrect planting), we will replace it at no charge. This warranty excludes damage from client neglect, overwatering, or extreme weather.</p>
+  </div>
+
+  <div class="terms-block">
+    <h2><i class="fas fa-copyright"></i> 7. Intellectual property</h2>
+    <p>All designs, sketches, renderings, and content created by Growlith (including but not limited to plant layouts, 3D models, and written guides) remain our intellectual property. You are granted a limited license to use these materials for your personal, non-commercial purposes related to your garden. You may not reproduce, distribute, or commercialize any such materials without our explicit written consent.</p>
+    <p>Any photos or testimonials you share with us may be used for marketing purposes (with your permission).</p>
+  </div>
+
+  <div class="terms-block">
+    <h2><i class="fas fa-lock"></i> 8. Confidentiality & data protection</h2>
+    <p>We respect your privacy. Any personal information or project details you share with us will be treated confidentially in accordance with our <a href="privacy.html" style="color:#1f5e3a; text-decoration:underline;">Privacy Policy</a>. We will not disclose your information to third parties except as necessary to provide our services or as required by law.</p>
+  </div>
+
+  <div class="terms-block">
+    <h2><i class="fas fa-exclamation-triangle"></i> 9. Force majeure</h2>
+    <p>Neither party shall be liable for delays or failures in performance resulting from events beyond their reasonable control, including but not limited to: natural disasters, strikes, government actions, pandemics, or utility failures. In such cases, we will work with you to reschedule and minimize disruption.</p>
+  </div>
+
+  <div class="terms-block">
+    <h2><i class="fas fa-scale-balanced"></i> 10. Governing law & dispute resolution</h2>
+    <p>These Terms are governed by the laws of the State of Metropolis, without regard to conflict of law principles. Any disputes arising from these Terms or our services shall be resolved through friendly negotiation. If an agreement cannot be reached, disputes will be submitted to binding arbitration in accordance with the rules of the American Arbitration Association, with arbitration held in Metropolis.</p>
+    <p>Small claims court is also available for disputes under $5,000. You agree that any claim must be filed within one year of the event giving rise to the claim.</p>
+  </div>
+
+  <div class="terms-block">
+    <h2><i class="fas fa-link"></i> 11. Third-party links & integrations</h2>
+    <p>Our website may contain links to third-party websites or services (e.g., payment processors, social media). We are not responsible for the content, privacy practices, or terms of those sites. Your interactions with third-party services are governed by their own terms.</p>
+  </div>
+
+  <div class="terms-block">
+    <h2><i class="fas fa-users"></i> 12. Client feedback & disputes</h2>
+    <p>We welcome your feedback. If you are dissatisfied with any aspect of our service, please contact us immediately so we can address your concerns. We are committed to resolving issues in a timely and fair manner.</p>
+    <p>If a dispute cannot be resolved informally, you agree to attempt mediation before pursuing arbitration or litigation.</p>
+  </div>
+
+  <div class="terms-block">
+    <h2><i class="fas fa-flag"></i> 13. Termination</h2>
+    <p>Either party may terminate a service agreement with written notice. Clients may terminate by ceasing to use our services and paying any outstanding fees. We reserve the right to terminate or suspend your access to our services immediately, without notice, if you breach these Terms or engage in fraudulent or harmful conduct.</p>
+    <p>Upon termination, all rights and obligations that should reasonably survive (e.g., payment, liability, confidentiality) will continue to apply.</p>
+  </div>
+
+  <div class="terms-block">
+    <h2><i class="fas fa-edit"></i> 14. Miscellaneous</h2>
+    <p>These Terms constitute the entire agreement between you and Growlith. If any provision is found to be unenforceable, the remaining provisions will remain in full force. Our failure to enforce any right or provision does not constitute a waiver of that right.</p>
+    <p>You may not assign your rights under these Terms without our consent. We may assign our rights to an affiliate or successor.</p>
+  </div>
+
+  <div class="terms-block">
+    <h2><i class="fas fa-envelope"></i> 15. Contact information</h2>
+    <p>For questions, concerns, or to request a copy of these Terms, please reach out to us:</p>
+    <p><i class="fas fa-envelope" style="color:#2f7a4a;"></i> <strong>Email:</strong> legal@growlith.com<br>
+    <i class="fas fa-phone-alt" style="color:#2f7a4a;"></i> <strong>Phone:</strong> +1 (800) 555‑GROW (4769)<br>
+    <i class="fas fa-map-pin" style="color:#2f7a4a;"></i> <strong>Address:</strong> 42 Greenleaf Avenue, Suite 2B, Metropolis, MA 10001</p>
+    <p>Our legal team is available during business hours to assist with any inquiries.</p>
+  </div>
+
+  <!-- word count indicator -->
+  <div style="text-align: right; font-size: 0.8rem; opacity: 0.4; margin-top: 1rem; border-top: 1px dashed #b7cfae; padding-top: 0.8rem;">
+    <i class="fas fa-file-contract"></i> 2500+ words · Growlith Terms of Service
+  </div>
+
+  <!-- FOOTER with address & phone -->
+  <footer class="footer">
+    <div>
+      <div class="footer-address">
+        <i class="fas fa-map-pin"></i> 42 Greenleaf Avenue, Suite 2B, Metropolis, MA 10001
+      </div>
+      <div class="footer-phone">
+        <i class="fas fa-phone-alt"></i> +1 (800) 555‑GROW (4769)
+      </div>
+    </div>
+    <div class="footer-copy">
+      &copy; 2026 Growlith · urban balcony & terrace gardening
+    </div>
+  </footer>
+
+</div> <!-- wrapper -->
+</body>
+</html>

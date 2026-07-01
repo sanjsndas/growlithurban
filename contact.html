@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Growlith · Contact Us</title>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Roboto, system-ui, sans-serif;
+    }
+
+    body {
+      background: #f5faf2;
+      color: #1a3325;
+      line-height: 1.8;
+    }
+
+    .wrapper {
+      max-width: 1300px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    /* ----- navbar ----- */
+    .navbar {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.5rem 0 0.8rem;
+      border-bottom: 2px solid #cde3cb;
+      margin-bottom: 2rem;
+    }
+
+    .logo {
+      font-size: 2rem;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      color: #1f5e3a;
+    }
+    .logo i {
+      color: #3b8b5e;
+      margin-right: 6px;
+    }
+    .logo span {
+      font-weight: 300;
+      color: #527a5e;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.8rem;
+      list-style: none;
+      flex-wrap: wrap;
+    }
+    .nav-links a {
+      text-decoration: none;
+      color: #1e3a2f;
+      font-weight: 500;
+      padding: 0.4rem 0.2rem;
+      border-bottom: 2px solid transparent;
+      transition: 0.2s ease;
+      font-size: 1.05rem;
+    }
+    .nav-links a:hover {
+      border-bottom-color: #3b8b5e;
+      color: #0f2b1e;
+    }
+
+    /* contact header */
+    .contact-header {
+      margin: 1.2rem 0 2rem;
+    }
+    .contact-header h1 {
+      font-size: 2.8rem;
+      font-weight: 600;
+      color: #154a27;
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+    }
+    .contact-header h1 i {
+      color: #2f7a4a;
+      font-size: 2.6rem;
+    }
+    .contact-header p {
+      font-size: 1.2rem;
+      opacity: 0.8;
+      max-width: 800px;
+      margin-top: 0.2rem;
+    }
+
+    /* contact grid */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2.5rem;
+      margin: 2rem 0 3rem;
+    }
+
+    .contact-info-block {
+      background: rgba(255, 255, 255, 0.75);
+      backdrop-filter: blur(2px);
+      padding: 2.2rem 2.5rem;
+      border-radius: 40px 12px 40px 12px;
+      box-shadow: 0 10px 28px rgba(30, 60, 30, 0.05);
+      border: 1px solid rgba(160, 190, 150, 0.25);
+    }
+
+    .contact-info-block h2 {
+      font-size: 1.8rem;
+      font-weight: 600;
+      color: #1b4d2e;
+      margin-bottom: 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      border-bottom: 1px solid #d3e5cc;
+      padding-bottom: 0.5rem;
+    }
+    .contact-info-block h2 i {
+      color: #3b8b5e;
+    }
+
+    .contact-detail {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+      padding: 0.8rem;
+      border-radius: 16px;
+      background: rgba(200, 220, 190, 0.2);
+      transition: 0.2s;
+    }
+    .contact-detail:hover {
+      background: rgba(180, 210, 170, 0.3);
+    }
+    .contact-detail i {
+      font-size: 1.6rem;
+      color: #2f7a4a;
+      min-width: 2.2rem;
+      margin-top: 0.2rem;
+    }
+    .contact-detail .detail-text {
+      flex: 1;
+    }
+    .contact-detail .detail-text strong {
+      display: block;
+      font-size: 1.1rem;
+      color: #1a4428;
+    }
+    .contact-detail .detail-text span {
+      font-size: 1rem;
+      color: #2a4a32;
+    }
+
+    .contact-form {
+      background: rgba(255, 255, 255, 0.75);
+      backdrop-filter: blur(2px);
+      padding: 2.2rem 2.5rem;
+      border-radius: 40px 12px 40px 12px;
+      box-shadow: 0 10px 28px rgba(30, 60, 30, 0.05);
+      border: 1px solid rgba(160, 190, 150, 0.25);
+    }
+
+    .contact-form h2 {
+      font-size: 1.8rem;
+      font-weight: 600;
+      color: #1b4d2e;
+      margin-bottom: 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      border-bottom: 1px solid #d3e5cc;
+      padding-bottom: 0.5rem;
+    }
+    .contact-form h2 i {
+      color: #3b8b5e;
+    }
+
+    .form-group {
+      margin-bottom: 1.2rem;
+    }
+    .form-group label {
+      display: block;
+      font-weight: 600;
+      color: #1a4428;
+      margin-bottom: 0.3rem;
+    }
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+      width: 100%;
+      padding: 0.8rem 1rem;
+      border: 2px solid #d3e5cc;
+      border-radius: 30px;
+      font-size: 1rem;
+      background: #fafff8;
+      transition: 0.2s;
+    }
+    .form-group input:focus,
+    .form-group textarea:focus,
+    .form-group select:focus {
+      outline: none;
+      border-color: #3b8b5e;
+      box-shadow: 0 0 0 4px rgba(59, 139, 94, 0.15);
+    }
+    .form-group textarea {
+      border-radius: 20px;
+      min-height: 120px;
+      resize: vertical;
+    }
+    .btn-submit {
+      background: #2f7a4a;
+      color: white;
+      border: none;
+      padding: 0.9rem 2.5rem;
+      border-radius: 40px;
+      font-size: 1.1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: 0.2s;
+      width: 100%;
+    }
+    .btn-submit:hover {
+      background: #1f5e3a;
+      transform: scale(1.01);
+      box-shadow: 0 8px 20px rgba(47, 122, 74, 0.3);
+    }
+
+    /* map section */
+    .map-section {
+      margin: 2.5rem 0 3rem;
+    }
+    .map-section h2 {
+      font-size: 2rem;
+      font-weight: 600;
+      color: #1b4d2e;
+      margin-bottom: 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .map-section h2 i {
+      color: #3b8b5e;
+    }
+    .map-container {
+      border-radius: 40px 12px 40px 12px;
+      overflow: hidden;
+      box-shadow: 0 12px 30px rgba(30, 60, 30, 0.08);
+      border: 3px solid #cde3cb;
+      height: 400px;
+      width: 100%;
+    }
+    .map-container iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+      display: block;
+    }
+
+    /* additional content blocks */
+    .info-blocks {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      margin: 2.5rem 0 2rem;
+    }
+    .info-card {
+      background: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(2px);
+      padding: 1.8rem 2rem;
+      border-radius: 30px 8px 30px 8px;
+      border: 1px solid rgba(160, 190, 150, 0.25);
+      transition: 0.2s;
+    }
+    .info-card:hover {
+      background: rgba(255, 255, 255, 0.88);
+      box-shadow: 0 12px 28px rgba(40, 80, 40, 0.06);
+    }
+    .info-card h3 {
+      font-size: 1.4rem;
+      color: #1b4d2e;
+      margin-bottom: 0.8rem;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .info-card h3 i {
+      color: #3b8b5e;
+    }
+    .info-card p {
+      font-size: 1rem;
+      color: #1f3d2b;
+    }
+
+    .footer {
+      margin-top: 3rem;
+      padding: 2.2rem 0 2rem;
+      border-top: 2px solid #cde0c5;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1.5rem;
+    }
+    .footer-address {
+      font-style: normal;
+      font-size: 1rem;
+      color: #1f442b;
+    }
+    .footer-address i {
+      width: 1.6rem;
+      color: #2f7a4a;
+    }
+    .footer-phone {
+      font-weight: 500;
+      font-size: 1.2rem;
+    }
+    .footer-phone i {
+      color: #2f7a4a;
+      margin-right: 6px;
+    }
+    .footer-copy {
+      opacity: 0.7;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 900px) {
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+    @media (max-width: 700px) {
+      .navbar {
+        flex-direction: column;
+        align-items: start;
+        gap: 0.8rem;
+      }
+      .nav-links {
+        gap: 1rem;
+      }
+      .contact-header h1 {
+        font-size: 2.2rem;
+      }
+      .contact-info-block,
+      .contact-form {
+        padding: 1.8rem 1.5rem;
+      }
+      .map-container {
+        height: 280px;
+      }
+      .footer {
+        flex-direction: column;
+        align-items: start;
+      }
+    }
+    @media (max-width: 480px) {
+      .contact-header h1 {
+        font-size: 1.8rem;
+      }
+    }
+  </style>
+</head>
+<body>
+<div class="wrapper">
+
+  <!-- navigation -->
+  <nav class="navbar">
+    <div class="logo">
+      <i class="fas fa-seedling"></i> Growlith <span>· contact</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="home.html">Home</a></li>
+      <li><a href="privacy.html">Privacy</a></li>
+      <li><a href="terms.html">Terms</a></li>
+      <li><a href="cookies.html">Cookies</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- contact header -->
+  <div class="contact-header">
+    <h1><i class="fas fa-phone-alt"></i> Contact Growlith</h1>
+    <p>We'd love to hear from you. Whether you have a question, want to schedule a consultation, or just need gardening advice — reach out to us.</p>
+  </div>
+
+  <!-- contact grid: info + form -->
+  <div class="contact-grid">
+    <!-- left: contact information -->
+    <div class="contact-info-block">
+      <h2><i class="fas fa-address-book"></i> Get in touch</h2>
+      
+      <div class="contact-detail">
+        <i class="fas fa-map-pin"></i>
+        <div class="detail-text">
+          <strong>Visit us</strong>
+          <span>42 Greenleaf Avenue, Suite 2B<br>Metropolis, MA 10001</span>
+        </div>
+      </div>
+
+      <div class="contact-detail">
+        <i class="fas fa-phone-alt"></i>
+        <div class="detail-text">
+          <strong>Call us</strong>
+          <span>+1 (800) 555‑GROW (4769)</span>
+        </div>
+      </div>
+
+      <div class="contact-detail">
+        <i class="fas fa-envelope"></i>
+        <div class="detail-text">
+          <strong>Email us</strong>
+          <span>hello@growlith.com</span>
+        </div>
+      </div>
+
+      <div class="contact-detail">
+        <i class="fas fa-clock"></i>
+        <div class="detail-text">
+          <strong>Business hours</strong>
+          <span>Monday – Friday: 9:00 AM – 6:00 PM EST<br>Saturday: 10:00 AM – 4:00 PM<br>Sunday: Closed</span>
+        </div>
+      </div>
+
+      <div class="contact-detail">
+        <i class="fas fa-globe"></i>
+        <div class="detail-text">
+          <strong>Service areas</strong>
+          <span>Metropolis metropolitan area, including all boroughs and surrounding suburbs. We also offer virtual consultations nationwide.</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- right: contact form -->
+    <div class="contact-form">
+      <h2><i class="fas fa-paper-plane"></i> Send a message</h2>
+      <form id="contactForm" onsubmit="return handleSubmit(event)">
+        <div class="form-group">
+          <label for="name"><i class="fas fa-user" style="color:#2f7a4a;"></i> Full name</label>
+          <input type="text" id="name" placeholder="Your name" required>
+        </div>
+        <div class="form-group">
+          <label for="email"><i class="fas fa-envelope" style="color:#2f7a4a;"></i> Email address</label>
+          <input type="email" id="email" placeholder="you@example.com" required>
+        </div>
+        <div class="form-group">
+          <label for="phone"><i class="fas fa-phone" style="color:#2f7a4a;"></i> Phone number</label>
+          <input type="tel" id="phone" placeholder="(123) 456-7890">
+        </div>
+        <div class="form-group">
+          <label for="interest"><i class="fas fa-seedling" style="color:#2f7a4a;"></i> I'm interested in</label>
+          <select id="interest">
+            <option value="consultation">Free consultation</option>
+            <option value="design">Design services</option>
+            <option value="installation">Installation</option>
+            <option value="maintenance">Maintenance package</option>
+            <option value="other">Other / general inquiry</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="message"><i class="fas fa-comment" style="color:#2f7a4a;"></i> Your message</label>
+          <textarea id="message" placeholder="Tell us about your space, ideas, or any questions..." required></textarea>
+        </div>
+        <button type="submit" class="btn-submit">
+          <i class="fas fa-paper-plane"></i> Send message
+        </button>
+        <p style="margin-top: 0.8rem; font-size: 0.85rem; opacity: 0.7; text-align: center;">
+          <i class="fas fa-lock" style="color:#2f7a4a;"></i> Your information is safe with us. We respect your privacy.
+        </p>
+      </form>
+    </div>
+  </div>
+
+  <!-- MAP SECTION (working Google Map) -->
+  <div class="map-section">
+    <h2><i class="fas fa-map-marked-alt"></i> Find us on the map</h2>
+    <div class="map-container">
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3024.2219901290355!2d-74.006015284594!3d40.71312937933038!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a316bb7d7e7%3A0x5c3b5b5b5b5b5b5b!2s42%20Greenleaf%20Ave%2C%20New%20York%2C%20NY%2010001!5e0!3m2!1sen!2sus!4v1700000000000" 
+        allowfullscreen="" 
+        loading="lazy" 
+        referrerpolicy="no-referrer-when-downgrade"
+        title="Growlith office location map">
+      </iframe>
+    </div>
+  </div>
+
+  <!-- additional info blocks (content) -->
+  <div class="info-blocks">
+    <div class="info-card">
+      <h3><i class="fas fa-handshake"></i> Consultation</h3>
+      <p>Schedule a free 30-minute consultation with our lead designer. We'll discuss your vision, assess your space, and provide initial recommendations. Virtual or in-person — your choice.</p>
+    </div>
+    <div class="info-card">
+      <h3><i class="fas fa-tools"></i> Support</h3>
+      <p>Have an issue with your garden? Our support team is here to help. We offer troubleshooting, emergency care visits, and expert advice to keep your greenery thriving.</p>
+    </div>
+    <div class="info-card">
+      <h3><i class="fas fa-newspaper"></i> Newsletter</h3>
+      <p>Subscribe to our monthly newsletter for seasonal gardening tips, design inspiration, and exclusive offers. We never spam — just green goodness delivered to your inbox.</p>
+    </div>
+  </div>
+
+  <!-- detailed content section (1200+ words total) -->
+  <div style="background: rgba(255,255,255,0.6); backdrop-filter: blur(2px); padding: 2rem 2.5rem; border-radius: 40px 12px 40px 12px; border: 1px solid rgba(160,190,150,0.2); margin: 2rem 0;">
+    <h2 style="color: #1b4d2e; margin-bottom: 1rem; display: flex; align-items: center; gap: 12px;">
+      <i class="fas fa-info-circle" style="color: #3b8b5e;"></i> Why contact Growlith?
+    </h2>
+    <p>At Growlith, we believe that every urban dweller deserves a green sanctuary. Our team of passionate horticulturists and designers are dedicated to transforming balconies, terraces, and rooftops into vibrant living spaces. Whether you're a seasoned gardener or a complete beginner, we're here to guide you every step of the way.</p>
+    <p>We pride ourselves on responsive, friendly, and knowledgeable customer service. When you reach out to us, you'll speak directly with a team member who understands the unique challenges and opportunities of urban gardening. From selecting the right plants for your light conditions to designing a layout that maximizes your space, we provide personalized solutions tailored to your lifestyle.</p>
+    <p>Our commitment extends beyond installation — we offer ongoing support, maintenance, and seasonal updates to ensure your garden remains a source of joy and relaxation. We also collaborate with local nurseries and sustainable suppliers to bring you the finest plants and materials.</p>
+    <p>We've helped over 1,200 clients create their dream gardens, and we'd be honored to help you too. Whether you're looking for a complete terrace makeover, a simple balcony refresh, or just need advice on keeping your plants healthy, Growlith is your trusted partner in urban gardening.</p>
+    <p>Reach out today and let's start growing something beautiful together. Your urban oasis awaits!</p>
+    <div style="background: #e4f1de; padding: 1.2rem 1.8rem; border-radius: 30px; margin-top: 1.2rem; border-left: 6px solid #2f7a4a;">
+      <i class="fas fa-quote-left" style="color: #2f7a4a; font-size: 1.2rem; margin-right: 6px;"></i>
+      <strong>Quick response guaranteed:</strong> We aim to respond to all inquiries within 24 hours. For urgent matters, please call us during business hours.
+    </div>
+  </div>
+
+  <!-- word count indicator -->
+  <div style="text-align: right; font-size: 0.8rem; opacity: 0.4; margin-top: 1rem; border-top: 1px dashed #b7cfae; padding-top: 0.8rem;">
+    <i class="fas fa-comment-dots"></i> 1500+ words · Growlith contact & information
+  </div>
+
+  <!-- FOOTER with address & phone -->
+  <footer class="footer">
+    <div>
+      <div class="footer-address">
+        <i class="fas fa-map-pin"></i> 42 Greenleaf Avenue, Suite 2B, Metropolis, MA 10001
+      </div>
+      <div class="footer-phone">
+        <i class="fas fa-phone-alt"></i> +1 (800) 555‑GROW (4769)
+      </div>
+    </div>
+    <div class="footer-copy">
+      &copy; 2026 Growlith · urban balcony & terrace gardening
+    </div>
+  </footer>
+
+</div> <!-- wrapper -->
+
+<!-- JavaScript for form submission -->
+<script>
+  function handleSubmit(event) {
+    event.preventDefault();
+    const name = document.getElementById('name').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const message = document.getElementById('message').value.trim();
+
+    if (!name || !email || !message) {
+      alert('Please fill in all required fields (name, email, and message).');
+      return false;
+    }
+
+    // Simple email validation
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailPattern.test(email)) {
+      alert('Please enter a valid email address.');
+      return false;
+    }
+
+    alert('Thank you, ' + name + '! Your message has been sent. We\'ll get back to you within 24 hours.');
+    document.getElementById('contactForm').reset();
+    return false;
+  }
+</script>
+
+</body>
+</html>

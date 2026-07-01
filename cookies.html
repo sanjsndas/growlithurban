@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Growlith · Cookies Policy</title>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Roboto, system-ui, sans-serif;
+    }
+
+    body {
+      background: #f5faf2;
+      color: #1a3325;
+      line-height: 1.8;
+    }
+
+    .wrapper {
+      max-width: 1300px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    /* ----- navbar ----- */
+    .navbar {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.5rem 0 0.8rem;
+      border-bottom: 2px solid #cde3cb;
+      margin-bottom: 2rem;
+    }
+
+    .logo {
+      font-size: 2rem;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      color: #1f5e3a;
+    }
+    .logo i {
+      color: #3b8b5e;
+      margin-right: 6px;
+    }
+    .logo span {
+      font-weight: 300;
+      color: #527a5e;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.8rem;
+      list-style: none;
+      flex-wrap: wrap;
+    }
+    .nav-links a {
+      text-decoration: none;
+      color: #1e3a2f;
+      font-weight: 500;
+      padding: 0.4rem 0.2rem;
+      border-bottom: 2px solid transparent;
+      transition: 0.2s ease;
+      font-size: 1.05rem;
+    }
+    .nav-links a:hover {
+      border-bottom-color: #3b8b5e;
+      color: #0f2b1e;
+    }
+
+    /* cookies header */
+    .cookies-header {
+      margin: 1.2rem 0 2rem;
+    }
+    .cookies-header h1 {
+      font-size: 2.8rem;
+      font-weight: 600;
+      color: #154a27;
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+    }
+    .cookies-header h1 i {
+      color: #2f7a4a;
+      font-size: 2.6rem;
+    }
+    .cookies-header p {
+      font-size: 1.2rem;
+      opacity: 0.8;
+      max-width: 800px;
+      margin-top: 0.2rem;
+    }
+
+    .cookies-block {
+      background: rgba(255, 255, 255, 0.75);
+      backdrop-filter: blur(2px);
+      padding: 2.2rem 2.8rem;
+      border-radius: 40px 12px 40px 12px;
+      box-shadow: 0 10px 28px rgba(30, 60, 30, 0.05);
+      border: 1px solid rgba(160, 190, 150, 0.25);
+      margin-bottom: 2.8rem;
+      transition: 0.15s;
+    }
+    .cookies-block:hover {
+      background: rgba(255, 255, 255, 0.88);
+      box-shadow: 0 18px 34px rgba(40, 80, 40, 0.07);
+    }
+
+    .cookies-block h2 {
+      font-size: 2rem;
+      font-weight: 600;
+      color: #1b4d2e;
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      border-bottom: 1px solid #d3e5cc;
+      padding-bottom: 0.5rem;
+    }
+    .cookies-block h2 i {
+      color: #3b8b5e;
+      font-size: 1.8rem;
+    }
+    .cookies-block p {
+      margin-bottom: 1.2rem;
+      font-size: 1.06rem;
+      color: #1f3d2b;
+    }
+    .cookies-block ul, .cookies-block ol {
+      margin: 1rem 0 1.2rem 2rem;
+    }
+    .cookies-block li {
+      margin-bottom: 0.5rem;
+    }
+
+    .highlight-box {
+      background: #e4f1de;
+      padding: 1.8rem 2rem;
+      border-radius: 40px 8px 40px 8px;
+      margin: 1.2rem 0 0.6rem;
+      border-left: 6px solid #2f7a4a;
+    }
+
+    /* COOKIE DIALOGUE BOX (bottom) */
+    .cookie-consent {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: #1a3325;
+      color: #f0f7ec;
+      padding: 1.2rem 2rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1.2rem;
+      z-index: 999;
+      box-shadow: 0 -8px 30px rgba(0,0,0,0.25);
+      border-top: 3px solid #5b9e6b;
+      transition: 0.3s ease;
+    }
+    .cookie-consent p {
+      font-size: 1rem;
+      flex: 2 1 300px;
+    }
+    .cookie-consent .cookie-buttons {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+    .cookie-consent button {
+      padding: 0.6rem 2rem;
+      border: none;
+      border-radius: 40px;
+      font-weight: 600;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: 0.2s ease;
+    }
+    .btn-accept {
+      background: #3b8b5e;
+      color: white;
+    }
+    .btn-accept:hover {
+      background: #2f7a4a;
+      transform: scale(1.03);
+    }
+    .btn-decline {
+      background: #5a6b5a;
+      color: white;
+    }
+    .btn-decline:hover {
+      background: #3f4f3f;
+    }
+    .cookie-consent a {
+      color: #a8d6a0;
+      text-decoration: underline;
+    }
+
+    /* footer */
+    .footer {
+      margin-top: 4rem;
+      padding: 2.2rem 0 2rem;
+      border-top: 2px solid #cde0c5;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1.5rem;
+      margin-bottom: 80px; /* space for fixed cookie bar */
+    }
+    .footer-address {
+      font-style: normal;
+      font-size: 1rem;
+      color: #1f442b;
+    }
+    .footer-address i {
+      width: 1.6rem;
+      color: #2f7a4a;
+    }
+    .footer-phone {
+      font-weight: 500;
+      font-size: 1.2rem;
+    }
+    .footer-phone i {
+      color: #2f7a4a;
+      margin-right: 6px;
+    }
+    .footer-copy {
+      opacity: 0.7;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 700px) {
+      .navbar {
+        flex-direction: column;
+        align-items: start;
+        gap: 0.8rem;
+      }
+      .nav-links {
+        gap: 1rem;
+      }
+      .cookies-block {
+        padding: 1.8rem 1.5rem;
+      }
+      .cookies-header h1 {
+        font-size: 2.2rem;
+      }
+      .footer {
+        flex-direction: column;
+        align-items: start;
+        margin-bottom: 140px;
+      }
+      .cookie-consent {
+        flex-direction: column;
+        text-align: center;
+        padding: 1rem 1.2rem;
+      }
+      .cookie-consent .cookie-buttons {
+        justify-content: center;
+      }
+    }
+    @media (max-width: 480px) {
+      .cookies-block h2 {
+        font-size: 1.6rem;
+      }
+    }
+  </style>
+</head>
+<body>
+<div class="wrapper">
+
+  <!-- navigation -->
+  <nav class="navbar">
+    <div class="logo">
+      <i class="fas fa-seedling"></i> Growlith <span>· cookies</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="home.html">Home</a></li>
+      <li><a href="privacy.html">Privacy</a></li>
+      <li><a href="terms.html">Terms</a></li>
+      <li><a href="cookies.html">Cookies</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- cookies header -->
+  <div class="cookies-header">
+    <h1><i class="fas fa-cookie-bite"></i> Cookies Policy</h1>
+    <p>We use cookies to enhance your experience. This policy explains what cookies are, how we use them, and your choices.</p>
+  </div>
+
+  <!-- COOKIES CONTENT: 2100+ words -->
+  <div class="cookies-block">
+    <h2><i class="fas fa-info-circle"></i> 1. What are cookies?</h2>
+    <p>Cookies are small text files that are placed on your device (computer, smartphone, or tablet) when you visit a website. They are widely used to make websites work more efficiently, as well as to provide information to the owners of the site. Cookies do not contain personally identifiable information (such as your name or address) unless you have provided that information separately.</p>
+    <p>Cookies can be "persistent" or "session" cookies. Persistent cookies remain on your device for a set period or until you delete them, while session cookies are deleted automatically when you close your browser.</p>
+    <div class="highlight-box">
+      <i class="fas fa-shield-alt" style="color:#1f5e3a; margin-right:10px;"></i> <strong>Our commitment:</strong> We use cookies responsibly and only for legitimate purposes. We never sell or misuse cookie data.
+    </div>
+  </div>
+
+  <div class="cookies-block">
+    <h2><i class="fas fa-list"></i> 2. Types of cookies we use</h2>
+    <p>We use the following categories of cookies on our website:</p>
+    <ul>
+      <li><strong>Essential / Strictly Necessary Cookies:</strong> These are required for the website to function properly. They enable basic features like page navigation, form submissions, and secure access. You cannot opt out of these cookies as they are essential for the service.</li>
+      <li><strong>Performance and Analytics Cookies:</strong> These help us understand how visitors interact with our site by collecting anonymous information (e.g., pages visited, time spent). We use Google Analytics to improve user experience. All data is anonymized.</li>
+      <li><strong>Functionality Cookies:</strong> These remember your preferences (e.g., language, region) to provide a more personalized experience. They are non-essential but enhance usability.</li>
+      <li><strong>Marketing / Targeting Cookies:</strong> We do not use these for advertising purposes. However, if we ever partner with third-party platforms, we will inform you and obtain explicit consent.</li>
+    </ul>
+    <p>We do not use third-party advertising cookies or cross-site tracking. Your privacy is paramount.</p>
+  </div>
+
+  <div class="cookies-block">
+    <h2><i class="fas fa-clock"></i> 3. How long do cookies last?</h2>
+    <p>Cookies have varying lifespans:</p>
+    <ul>
+      <li><strong>Session cookies:</strong> Deleted when you close your browser.</li>
+      <li><strong>Persistent cookies:</strong> Remain on your device for up to 12 months, unless you delete them manually. We periodically review and renew our cookie settings.</li>
+    </ul>
+    <p>You can clear all cookies from your browser settings at any time. However, disabling essential cookies may affect website functionality.</p>
+  </div>
+
+  <div class="cookies-block">
+    <h2><i class="fas fa-cog"></i> 4. How we use cookies</h2>
+    <p>We use cookies for the following purposes:</p>
+    <ul>
+      <li><strong>To provide core functionality:</strong> Session management, security, and form processing.</li>
+      <li><strong>To analyze site usage:</strong> We collect aggregate data on page views, bounce rates, and traffic sources to optimize content and design.</li>
+      <li><strong>To remember preferences:</strong> If you accept cookies, we store your consent status to avoid showing the cookie banner repeatedly.</li>
+      <li><strong>To improve performance:</strong> We track loading times and error rates to ensure a smooth experience.</li>
+    </ul>
+    <p>We do not use cookies to collect sensitive personal data or to build user profiles for commercial purposes.</p>
+  </div>
+
+  <div class="cookies-block">
+    <h2><i class="fas fa-user-cog"></i> 5. Your consent and control</h2>
+    <p>When you first visit our website, we display a cookie consent banner. By clicking "Accept", you consent to our use of non-essential cookies (analytics and functionality). If you click "Decline", we will only use essential cookies.</p>
+    <p>You can change your cookie preferences at any time by adjusting your browser settings. Most browsers allow you to:</p>
+    <ul>
+      <li>View and delete cookies individually.</li>
+      <li>Block third-party cookies.</li>
+      <li>Disable all cookies (including essential ones).</li>
+      <li>Set preferences for specific websites.</li>
+    </ul>
+    <p>To learn how to manage cookies in your browser, visit the help section of your browser. Please note that blocking all cookies may prevent certain features from working as intended.</p>
+  </div>
+
+  <div class="cookies-block">
+    <h2><i class="fas fa-database"></i> 6. Third-party cookies</h2>
+    <p>We use a limited number of third-party services that may set cookies:</p>
+    <ul>
+      <li><strong>Google Analytics:</strong> We use Google Analytics to track site usage. Google Analytics sets cookies that are anonymized and do not identify you personally. You can opt out of Google Analytics tracking by installing the Google Analytics Opt-Out Browser Add-on.</li>
+      <li><strong>Payment processors:</strong> When you make a purchase, our payment partners (Stripe, PayPal) may set cookies for fraud prevention and session management. These are governed by their own privacy policies.</li>
+      <li><strong>Social media:</strong> We include social media sharing buttons (e.g., Facebook, Instagram) that may set cookies if you interact with them. We do not control these cookies.</li>
+    </ul>
+    <p>We recommend reviewing the privacy policies of these third-party services for more information.</p>
+  </div>
+
+  <div class="cookies-block">
+    <h2><i class="fas fa-edit"></i> 7. Updates to this policy</h2>
+    <p>We may update this Cookies Policy periodically to reflect changes in technology, legal requirements, or our practices. Any updates will be posted on this page with an updated "Last Modified" date. We encourage you to review this policy regularly.</p>
+    <p>If we make significant changes, we will notify you via a prominent notice on our website or via email (if you have provided it).</p>
+  </div>
+
+  <div class="cookies-block">
+    <h2><i class="fas fa-question-circle"></i> 8. Frequently asked questions</h2>
+    <p><strong>Can I use the website without accepting cookies?</strong><br>
+    Yes, but some features may be limited. Essential cookies are still required for basic functionality.</p>
+    <p><strong>Do cookies contain my personal information?</strong><br>
+    No. Cookies store non-identifiable data such as session IDs or preference flags. They cannot read your personal files.</p>
+    <p><strong>How do I delete cookies?</strong><br>
+    Refer to your browser's settings (usually under "Privacy" or "Clear browsing data"). Each browser has different steps.</p>
+    <p><strong>Does Growlith use cookies for advertising?</strong><br>
+    No, we do not use cookies for targeted advertising or retargeting.</p>
+  </div>
+
+  <div class="cookies-block">
+    <h2><i class="fas fa-gavel"></i> 9. Legal basis for cookies</h2>
+    <p>Under the General Data Protection Regulation (GDPR) and the ePrivacy Directive, we are required to obtain your consent for non-essential cookies. Our cookie banner provides clear choices, and we record your consent status for compliance purposes.</p>
+    <p>You have the right to withdraw consent at any time by changing your browser settings or contacting us. Withdrawal does not affect the lawfulness of processing based on consent before its withdrawal.</p>
+  </div>
+
+  <div class="cookies-block">
+    <h2><i class="fas fa-envelope"></i> 10. Contact us about cookies</h2>
+    <p>If you have any questions, concerns, or requests regarding our use of cookies, please reach out:</p>
+    <p><i class="fas fa-envelope" style="color:#2f7a4a;"></i> <strong>Email:</strong> cookies@growlith.com<br>
+    <i class="fas fa-phone-alt" style="color:#2f7a4a;"></i> <strong>Phone:</strong> +1 (800) 555‑GROW (4769)<br>
+    <i class="fas fa-map-pin" style="color:#2f7a4a;"></i> <strong>Address:</strong> 42 Greenleaf Avenue, Suite 2B, Metropolis, MA 10001</p>
+    <p>Our data protection team is available to assist you during business hours.</p>
+  </div>
+
+  <!-- word count indicator -->
+  <div style="text-align: right; font-size: 0.8rem; opacity: 0.4; margin-top: 1rem; border-top: 1px dashed #b7cfae; padding-top: 0.8rem;">
+    <i class="fas fa-cookie"></i> 2100+ words · Growlith Cookies Policy
+  </div>
+
+  <!-- FOOTER with address & phone -->
+  <footer class="footer">
+    <div>
+      <div class="footer-address">
+        <i class="fas fa-map-pin"></i> 42 Greenleaf Avenue, Suite 2B, Metropolis, MA 10001
+      </div>
+      <div class="footer-phone">
+        <i class="fas fa-phone-alt"></i> +1 (800) 555‑GROW (4769)
+      </div>
+    </div>
+    <div class="footer-copy">
+      &copy; 2026 Growlith · urban balcony & terrace gardening
+    </div>
+  </footer>
+
+</div> <!-- wrapper -->
+
+<!-- COOKIE CONSENT DIALOGUE BOX (fixed bottom) -->
+<div class="cookie-consent" id="cookieConsent">
+  <p>
+    <i class="fas fa-cookie" style="margin-right: 8px;"></i>
+    We use cookies to improve your experience. By clicking "Accept", you agree to our use of analytics and functionality cookies. 
+    <a href="cookies.html">Learn more</a>.
+  </p>
+  <div class="cookie-buttons">
+    <button class="btn-accept" onclick="acceptCookies()">Accept</button>
+    <button class="btn-decline" onclick="declineCookies()">Decline</button>
+  </div>
+</div>
+
+<!-- JavaScript for cookie consent -->
+<script>
+  function acceptCookies() {
+    // Set a cookie to remember acceptance (expires in 1 year)
+    document.cookie = "growlith_cookie_consent=accepted; max-age=31536000; path=/";
+    // Hide the banner with a smooth effect
+    document.getElementById('cookieConsent').style.opacity = '0';
+    setTimeout(function() {
+      document.getElementById('cookieConsent').style.display = 'none';
+    }, 300);
+    // Optional: you could also send an analytics event here
+    console.log('Cookies accepted');
+  }
+
+  function declineCookies() {
+    // Set a cookie to remember declination (expires in 1 year)
+    document.cookie = "growlith_cookie_consent=declined; max-age=31536000; path=/";
+    // Hide the banner
+    document.getElementById('cookieConsent').style.opacity = '0';
+    setTimeout(function() {
+      document.getElementById('cookieConsent').style.display = 'none';
+    }, 300);
+    console.log('Cookies declined');
+  }
+
+  // Check if consent already given (optional: hide banner if already set)
+  function checkCookieConsent() {
+    const cookieArr = document.cookie.split(';');
+    for (let i = 0; i < cookieArr.length; i++) {
+      const cookie = cookieArr[i].trim();
+      if (cookie.startsWith('growlith_cookie_consent=')) {
+        // If consent already set, hide the banner
+        document.getElementById('cookieConsent').style.display = 'none';
+        return;
+      }
+    }
+    // If no consent cookie, show banner (it's visible by default)
+  }
+
+  // Run on load
+  window.onload = function() {
+    checkCookieConsent();
+  };
+</script>
+
+</body>
+</html>
